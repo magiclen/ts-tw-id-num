@@ -20,8 +20,22 @@
     "prepack": "npm run build",
     "prepublishOnly": "npm run lint && npm run test"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magiclen/ts-tw-id-num.git"
+  },
+  "keywords": [
+    "中華民國", "台灣", "身份證字號", "統一證號"
+  ],
+  "author": "Magic Len",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magiclen/ts-tw-id-num/issues"
+  },
+  "homepage": "https://magiclen.org/tw-id-num/",
   "devDependencies": {
     "@types/jest": "^29.2.0",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
