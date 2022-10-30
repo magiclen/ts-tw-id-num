@@ -1,6 +1,6 @@
 {
   "name": "tw-id-num",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check or generate Taiwan ID numbers. 檢查或是產生中華民國國民身分證統一編號(即身份證字號，而非營業人統一編號)，支援新式外來人口統一證號。",
   "main": "lib/lib.js",
   "types": "lib/lib.d.ts",
@@ -28,7 +28,7 @@
     "url": "git+https://github.com/magiclen/ts-tw-id-num.git"
   },
   "keywords": [
-    "中華民國", "台灣", "身份證字號", "統一證號"
+    "中華民國", "台灣", "Taiwan", "身份證字號", "統一證號"
   ],
   "author": "Magic Len",
   "license": "MIT",
