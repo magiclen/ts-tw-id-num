@@ -14,6 +14,7 @@
     "clean": "rimraf lib",
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "build:watch": "npm run build -- -w",
+    "build:src": "node build.js",
     "lint": "eslint src tests",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "git config core.hooksPath .githooks || exit 0",

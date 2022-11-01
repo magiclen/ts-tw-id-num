@@ -25,7 +25,13 @@ export const enum Mode {
  * 新式外來人口統一證號：男性為8；女性為9。
  */
 export const enum Sex {
+    /**
+     * 男性。
+     */
     Male,
+    /**
+     * 女性。
+     */
     Female,
 }
 
