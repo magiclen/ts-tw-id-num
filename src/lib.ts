@@ -5,7 +5,7 @@ import { LOCATION_VALUES } from "./location_letters";
  */
 export const enum Mode {
     /**
-     * 國民身分證統一編號 OR 新式外來人口統一證號
+     * 國民身分證統一編號 OR 新式外來人口統一證號。
      */
     Default,
     /**
