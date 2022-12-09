@@ -3,7 +3,7 @@ import { LOCATION_VALUES } from "./location_letters";
 /**
  * 檢查或是產生的模式。
  */
-export const enum Mode {
+export enum Mode {
     /**
      * 國民身分證統一編號 OR 新式外來人口統一證號。
      */
@@ -24,7 +24,7 @@ export const enum Mode {
  * 國民身分證統一編號：男性為1；女性為2。
  * 新式外來人口統一證號：男性為8；女性為9。
  */
-export const enum Sex {
+export enum Sex {
     /**
      * 男性。
      */

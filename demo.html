@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/ts-tw-id-num/dist/tw-id-num.min.js"></script> -->
+    <script src="./dist/tw-id-num.min.js"></script>
+    <title>tw-id-num</title>
+</head>
+
+<body>
+    <button type="button" id="generate">產生</button>
+    <input type="text" id="text" />
+    <button type="button" id="check">檢查</button>
+    <script>
+        const generateButton = document.getElementById('generate');
+        const textInput = document.getElementById('text');
+        const checkButton = document.getElementById('check');
+
+        generateButton.addEventListener('click', () => {
+            textInput.value = TWIDNum.generate();
+        }, {
+            passive: true
+        });
+
+        checkButton.addEventListener('click', () => {
+            alert(TWIDNum.check(textInput.value));
+        }, {
+            passive: true
+        });
+    </script>
+</body>
+
+</html>
