@@ -129,6 +129,7 @@ export const generate = (mode: Mode = Mode.Default, sex?: Sex): string => {
                         sexNumber += 5;
                     }
             }
+            
             break;
     }
 
