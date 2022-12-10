@@ -20,7 +20,7 @@ console.log(check(id)); // true
 ## Usage for Browsers
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/ts-tw-id-num/dist/tw-id-num.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/magiclen/ts-tw-id-num/dist/tw-id-num.min.js"></script>
 <script>
     const id = TWIDNum.generate(TWIDNum.Mode.National); // e.g. "A123456789"
 
