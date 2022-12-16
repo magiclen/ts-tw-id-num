@@ -5,16 +5,18 @@ tw-id-num
 
 Check or generate Taiwan ID numbers.
 
-檢查或是產生中華民國**國民身分證統一編號**(即**身份證字號**，而非營業人統一編號)，支援**新式外來人口統一證號**。特別支援舊式外來人口統一證號的檢查。
+檢查或是產生中華民國**國民身分證統一編號**(即**身份證字號**，而非營業人統一編號)，支援**新式外來人口統一證號**。也特別支援舊式外來人口統一證號的檢查。
 
 ## Usage
 
 ```typescript
-import { Mode, check, generate } from "tw-id-num";
+import { Mode, check, generate, checkIncludingOldResidentID } from "tw-id-num";
 
 const id = generate(Mode.National); // e.g. "A123456789"
 
 console.log(check(id)); // true
+
+console.log(checkIncludingOldResidentID("HD12345678")); // true
 ```
 
 ## Usage for Browsers
@@ -25,6 +27,8 @@ console.log(check(id)); // true
     const id = TWIDNum.generate(TWIDNum.Mode.National); // e.g. "A123456789"
 
     console.log(TWIDNum.check(id)); // true
+    
+    console.log(TWIDNum.checkIncludingOldResidentID("HD12345678")); // true
 </script>
 ```
 

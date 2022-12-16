@@ -2,9 +2,11 @@ import { checkOldResidentID } from "../src/lib";
 
 describe("check", () => {
     it("should success", () => {
-        expect(checkOldResidentID("FB3001429")).toBe(false);
-        expect(checkOldResidentID("FB30014295")).toBe(false);
+        expect(checkOldResidentID("HD1234567")).toBe(false);
+        expect(checkOldResidentID("HD12345677")).toBe(false);
+        expect(checkOldResidentID("hd12345677")).toBe(false);
 
+        expect(checkOldResidentID("HD12345678")).toBe(true);
         expect(checkOldResidentID("FB30014296")).toBe(true);
         expect(checkOldResidentID("JC00779341")).toBe(true);
         expect(checkOldResidentID("HC04351464")).toBe(true);
