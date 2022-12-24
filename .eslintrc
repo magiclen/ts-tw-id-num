@@ -4,7 +4,9 @@
         "@typescript-eslint"
     ],
     "env": {
-        "es2022": true
+        "es2022": true,
+        "node": true,
+        "browser": true
     },
     "parserOptions": {
         "project": "./tsconfig.json"
