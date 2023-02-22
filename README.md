@@ -21,16 +21,9 @@ console.log(checkIncludingOldResidentID("HD12345678")); // true
 
 ## Usage for Browsers
 
-```html
-<script src="https://cdn.jsdelivr.net/gh/magiclen/ts-tw-id-num/dist/tw-id-num.min.js"></script>
-<script>
-    const id = TWIDNum.generate(TWIDNum.Mode.National); // e.g. "A123456789"
+[Source](demo.html)
 
-    console.log(TWIDNum.check(id)); // true
-    
-    console.log(TWIDNum.checkIncludingOldResidentID("HD12345678")); // true
-</script>
-```
+[Demo Page](https://rawcdn.githack.com/magiclen/ts-tw-id-num/master/demo.html)
 
 ## License
 

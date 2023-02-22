@@ -1,6 +1,6 @@
 {
   "name": "tw-id-num",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Check or generate Taiwan ID numbers. 檢查或是產生中華民國國民身分證統一編號(即身份證字號，而非營業人統一編號)，支援新式外來人口統一證號。也特別支援舊式外來人口統一證號的檢查。",
   "main": "lib/lib.js",
   "types": "lib/lib.d.ts",
