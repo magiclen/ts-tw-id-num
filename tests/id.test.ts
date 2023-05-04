@@ -1,4 +1,4 @@
-import { check, generate, Mode } from "../src/lib";
+import { check, generate, Mode } from "../src/lib.js";
 
 describe("check", () => {
     it("should success (Default mode)", () => {

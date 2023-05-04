@@ -1,4 +1,4 @@
-import { checkOldResidentID } from "../src/lib";
+import { checkOldResidentID } from "../src/lib.js";
 
 describe("check", () => {
     it("should success", () => {

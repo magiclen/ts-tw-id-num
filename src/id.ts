@@ -1,4 +1,4 @@
-import { LOCATION_VALUES } from "./location_letters";
+import { LOCATION_VALUES } from "./location_letters.js";
 
 /**
  * 檢查或是產生的模式。
