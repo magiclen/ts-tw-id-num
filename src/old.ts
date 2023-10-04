@@ -1,5 +1,5 @@
-import { LOCATION_VALUES } from "./location_letters.js";
 import { check } from "./id.js";
+import { LOCATION_VALUES } from "./location_letters.js";
 
 const calculateValue = (text: string): number => {
     // eslint-disable-next-line no-extra-parens
