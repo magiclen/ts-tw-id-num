@@ -2,8 +2,8 @@ import { check } from "./id.js";
 import { LOCATION_VALUES } from "./location_letters.js";
 
 const calculateValue = (text: string): number => {
-    // eslint-disable-next-line no-extra-parens
-    let value = LOCATION_VALUES[text[0]] + ((text[1].charCodeAt(0) - "A".charCodeAt(0)) * 8);
+    let value = LOCATION_VALUES[text[0]]
+        + ((text[1].charCodeAt(0) - "A".charCodeAt(0)) * 8);
 
     for (let i = 2;i < 9;i++) {
         value += (text.charCodeAt(i) - 48) * (9 - i);
@@ -16,7 +16,7 @@ const calculateValue = (text: string): number => {
  * 檢查舊式外來人口統一證號。
  */
 export const checkOldResidentID = (text: string): boolean => {
-    if (!(/^[A-Z][A-D]\d{8}$/).test(text)) {
+    if (!(/^[A-Z][A-D]\d{8}$/u).test(text)) {
         return false;
     }
 

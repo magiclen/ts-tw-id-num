@@ -15,7 +15,7 @@ export enum Mode {
     /**
      * 新式外來人口統一證號。
      */
-    Resident
+    Resident,
 }
 
 /**
@@ -51,18 +51,22 @@ const calculateValue = (text: string): number => {
 export const check = (text: string, mode: Mode = Mode.Default): boolean => {
     switch (mode) {
         case Mode.National:
-            if (!(/^[A-Z][12]\d{8}$/).test(text)) {
+            if (!(/^[A-Z][12]\d{8}$/u).test(text)) {
                 return false;
             }
             break;
         case Mode.Resident:
-            if (!(/^[A-KM-QT-XZ][89]\d{8}$/).test(text)) {
+            if (!(/^[A-KM-QT-XZ][89]\d{8}$/u).test(text)) {
                 return false;
             }
             break;
         default:
             // Mode.Default
-            if (!(/^(?:(?:[A-KM-QT-XZ][1289])|(?:[LRSY][12]))\d{8}$/).test(text)) {
+            if (
+                !(/^(?:(?:[A-KM-QT-XZ][1289])|(?:[LRSY][12]))\d{8}$/u).test(
+                    text,
+                )
+            ) {
                 return false;
             }
             break;
@@ -129,7 +133,7 @@ export const generate = (mode: Mode = Mode.Default, sex?: Sex): string => {
                         sexNumber += 5;
                     }
             }
-            
+
             break;
     }
 
@@ -151,12 +155,15 @@ export const generate = (mode: Mode = Mode.Default, sex?: Sex): string => {
         location = String.fromCharCode(rnd + 65);
     }
 
-    const seq = Math.floor(Math.random() * 10000000).toString().padStart(7, "0");
+    const seq = Math.floor(Math.random() * 10000000).toString().padStart(
+        7,
+        "0",
+    );
 
     const prefix = `${location}${sexNumber}${seq}`;
 
     const value = calculateValue(prefix);
-    // eslint-disable-next-line no-extra-parens
+
     const checkNumber = (10 - (value % 10)) % 10;
 
     return `${prefix}${checkNumber}`;
