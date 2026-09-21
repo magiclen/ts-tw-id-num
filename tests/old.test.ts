@@ -1,19 +1,22 @@
-import { checkOldResidentID } from "../src/lib.js";
+import assert from "node:assert/strict";
+import { describe, it } from "node:test";
+
+import { checkOldResidentID } from "../src/index.ts";
 
 describe("check", () => {
     it("should success", () => {
-        expect(checkOldResidentID("HD1234567")).toBe(false);
-        expect(checkOldResidentID("HD12345677")).toBe(false);
-        expect(checkOldResidentID("hd12345677")).toBe(false);
+        assert.equal(checkOldResidentID("HD1234567"), false);
+        assert.equal(checkOldResidentID("HD12345677"), false);
+        assert.equal(checkOldResidentID("hd12345677"), false);
 
-        expect(checkOldResidentID("HD12345678")).toBe(true);
-        expect(checkOldResidentID("FB30014296")).toBe(true);
-        expect(checkOldResidentID("JC00779341")).toBe(true);
-        expect(checkOldResidentID("HC04351464")).toBe(true);
-        expect(checkOldResidentID("FA20174998")).toBe(true);
-        expect(checkOldResidentID("XA00045953")).toBe(true);
-        expect(checkOldResidentID("XA00159292")).toBe(true);
-        expect(checkOldResidentID("XA00159292")).toBe(true);
-        expect(checkOldResidentID("AD30344403")).toBe(true);
+        assert.equal(checkOldResidentID("HD12345678"), true);
+        assert.equal(checkOldResidentID("FB30014296"), true);
+        assert.equal(checkOldResidentID("JC00779341"), true);
+        assert.equal(checkOldResidentID("HC04351464"), true);
+        assert.equal(checkOldResidentID("FA20174998"), true);
+        assert.equal(checkOldResidentID("XA00045953"), true);
+        assert.equal(checkOldResidentID("XA00159292"), true);
+        assert.equal(checkOldResidentID("XA00159292"), true);
+        assert.equal(checkOldResidentID("AD30344403"), true);
     });
 });

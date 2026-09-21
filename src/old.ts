@@ -1,22 +1,19 @@
-import { check } from "./id.js";
-import { LOCATION_VALUES } from "./location_letters.js";
+import { check } from "./id.ts";
+import { getLocationValue } from "./location.ts";
 
 const calculateValue = (text: string): number => {
-    let value = LOCATION_VALUES[text[0]]
-        + ((text[1].charCodeAt(0) - "A".charCodeAt(0)) * 8);
+    let value = getLocationValue(text[0]) + (text[1].charCodeAt(0) - "A".charCodeAt(0)) * 8;
 
-    for (let i = 2;i < 9;i++) {
+    for (let i = 2; i < 9; i++) {
         value += (text.charCodeAt(i) - 48) * (9 - i);
     }
 
     return value;
 };
 
-/**
- * 檢查舊式外來人口統一證號。
- */
+/** 檢查舊式外來人口統一證號。 */
 export const checkOldResidentID = (text: string): boolean => {
-    if (!(/^[A-Z][A-D]\d{8}$/u).test(text)) {
+    if (!/^[A-Z][A-D]\d{8}$/u.test(text)) {
         return false;
     }
 
@@ -25,9 +22,7 @@ export const checkOldResidentID = (text: string): boolean => {
     return value % 10 === 0;
 };
 
-/**
- * 檢查國民身分證統一編號或是新、舊式外來人口統一證號。
- */
+/** 檢查國民身分證統一編號或是新、舊式外來人口統一證號。 */
 export const checkIncludingOldResidentID = (text: string): boolean => {
     if (check(text)) {
         return true;
