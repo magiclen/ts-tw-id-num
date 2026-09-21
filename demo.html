@@ -49,7 +49,7 @@
             checkButton.addEventListener(
                 "click",
                 () => {
-                    alert(TWIDNum.checkIncludingOldResidentID(textInput.value));
+                    alert(TWIDNum.check(textInput.value, ["national", "resident", "old-resident"]));
                 },
                 {
                     passive: true,
