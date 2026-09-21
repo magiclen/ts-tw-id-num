@@ -1,5 +1,5 @@
 /** The official two-digit code of each location letter. */
-const LOCATION_CODES: Readonly<Record<string, number>> = {
+export const LOCATION_CODES: Readonly<Record<string, number>> = {
     A: 10,
     B: 11,
     C: 12,
@@ -28,13 +28,8 @@ const LOCATION_CODES: Readonly<Record<string, number>> = {
     Z: 33,
 };
 
-/**
- * Gets the weighted value of a location letter.
- *
- * The tens digit of the code is weighted by 1 and the units digit is weighted by 9.
- */
-export const getLocationValue = (letter: string): number => {
-    const code = LOCATION_CODES[letter];
+/** All location letters. */
+export const LOCATION_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    return Math.floor(code / 10) + (code % 10) * 9;
-};
+/** The location letters which are still used for new ID numbers. L, R, S and Y are no longer used. */
+export const ACTIVE_LOCATION_LETTERS = "ABCDEFGHIJKMNOPQTUVWXZ";
